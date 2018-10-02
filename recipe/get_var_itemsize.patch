@@ -1,0 +1,12 @@
+diff --git a/bmi_hydrotrend.c b/bmi_hydrotrend.c
+index 4abdc19..c8b2c8d 100644
+--- a/bmi_hydrotrend.c
++++ b/bmi_hydrotrend.c
+@@ -584,6 +584,7 @@ register_bmi_hydrotrend(BMI_Model *model)
+     model->get_var_type = get_var_type;
+     model->get_var_units = get_var_units;
+     model->get_var_nbytes = get_var_nbytes;
++    model->get_var_itemsize = get_var_itemsize;
+     model->get_var_location = get_var_location;
+     model->get_current_time = get_current_time;
+     model->get_start_time = get_start_time;
