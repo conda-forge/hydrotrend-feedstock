@@ -1,0 +1,13 @@
+diff --git a/bmi_hydrotrend.c b/bmi_hydrotrend.c
+index 4abdc19..e3e8a02 100644
+--- a/bmi_hydrotrend.c
++++ b/bmi_hydrotrend.c
+@@ -432,7 +432,7 @@ get_var_nbytes(void *self, const char *name, int *nbytes)
+ static int
+ get_var_location(void *self, const char *name, char *loc)
+ {
+-    strncpy(loc, "grid", BMI_MAX_VAR_NAME);
++    strncpy(loc, "node", BMI_MAX_VAR_NAME);
+     return BMI_SUCCESS;
+ }
+ 

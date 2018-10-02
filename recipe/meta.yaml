@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/csdms-contrib/hydrotrend/archive/v{{ version }}.tar.gz
   sha256: 0893d2669ec69f00a5e2d83b12dc35856ab12230e5deb5f22fd87e42f0f92f33
+  patches:
+    - var_at_node.patch  # get_var_location should return "node", not "grid"
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
