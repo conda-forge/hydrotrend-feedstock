@@ -20,7 +20,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/hydrotrend-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/hydrotrend-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/hydrotrend-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/hydrotrend-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/hydrotrend-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/hydrotrend-feedstock/branch/master)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
