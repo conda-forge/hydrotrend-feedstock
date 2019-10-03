@@ -19,10 +19,11 @@ requirements:
 test:
   commands:
     - hydrotrend -h
+    - hydrotrend -v
     - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO.IN > ./HYDRO.IN
     - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO0.HYPS > ./HYDRO0.HYPS
-    - hydrotrend --prefix=HYDRO --in-dir=. --out-dir=.
-
+    - hydrotrend --prefix=HYDRO --in-dir=. --out-dir=.  # [not win]
+    - hydrotrend  # [win]
 about:
   home: http://csdms.colorado.edu/wiki/Model:HydroTrend
   license: MIT
