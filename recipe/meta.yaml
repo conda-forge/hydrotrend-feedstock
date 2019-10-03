@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/csdms-contrib/hydrotrend/archive/v{{ version }}.tar.gz
-  sha256: 43b58eb1eb40a344f64f432d63d35f014379650c4ad0fe6c7c0417f91cdbe8d8
+  sha256: f0d958343429c1790b07cacb4f99546be648510bab07bb594b0a2c5f250ae87a
 
 build:
   number: 0
