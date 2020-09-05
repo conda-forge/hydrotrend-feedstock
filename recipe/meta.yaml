@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/csdms-contrib/hydrotrend/archive/v{{ version }}.tar.gz
   sha256: 919757a2696b5a60d5244c8278e213952d2985522ba5d8e19dd67dc08cf01c03
+  patches:
+    - windows.patch  # use char*, not void*
 
 build:
   number: 0

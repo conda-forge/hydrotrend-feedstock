@@ -1,0 +1,33 @@
+diff --git a/bmi_hydrotrend.c b/bmi_hydrotrend.c
+index f8cbe18..206c517 100644
+--- a/bmi_hydrotrend.c
++++ b/bmi_hydrotrend.c
+@@ -37,9 +37,7 @@ get_component_name (BMI_Model *self, char * name)
+ 
+ 
+ #define INPUT_VAR_NAME_COUNT (0)
+-static const char *input_var_names[INPUT_VAR_NAME_COUNT] = {
+-
+-};
++static const char **input_var_names = NULL;
+ 
+ 
+ static int
+@@ -460,7 +458,7 @@ get_value_at_indices (BMI_Model *self, const char *name, void *dest,
+     { /* Copy the data */
+         int i;
+         int offset;
+-        void * ptr;
++        char * ptr;
+         for (i=0, ptr=dest; i<len; i++, ptr+=itemsize) {
+             offset = inds[i] * itemsize;
+             memcpy (ptr, src + offset, itemsize);
+@@ -505,7 +503,7 @@ set_value_at_indices (BMI_Model *self, const char *name, int * inds, int len,
+     { /* Copy the data */
+         int i;
+         int offset;
+-        void * ptr;
++        char * ptr;
+         for (i=0, ptr=src; i<len; i++, ptr+=itemsize) {
+             offset = inds[i] * itemsize;
+             memcpy (to + offset, ptr, itemsize);
