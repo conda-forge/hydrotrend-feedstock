@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.1.2" %}
 
 package:
   name: hydrotrend
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/csdms-contrib/hydrotrend/archive/v{{ version }}.tar.gz
-  sha256: 3bb1f8eeddebe26bdd15e22d0d99191373e166ba9180797ead28107cf29cc5d9
+  sha256: 55ab55e0d6a47477cd539423edaed6814a0a02c55624347cd0cce90245c38766
 
 build:
   number: 0
