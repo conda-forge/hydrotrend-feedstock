@@ -5,9 +5,13 @@ Home: http://csdms.colorado.edu/wiki/Model:HydroTrend
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hydrotrend-feedstock/blob/master/LICENSE.txt)
 
 Summary: Climate driven hydrological transport model
+
+Development: http://github.com/csdms-contrib/hydrotrend
+
+Documentation: http://csdms.colorado.edu/wiki/Model:HydroTrend
 
 HydroTrend v3.0 is a climate-driven hydrological water balance and transport model that simulates water discharge and sediment load at a river outlet.
 
