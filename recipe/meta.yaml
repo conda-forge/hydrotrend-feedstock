@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.1.3" %}
 
 package:
   name: hydrotrend
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/csdms-contrib/hydrotrend/archive/v{{ version }}.tar.gz
-  sha256: 3bb1f8eeddebe26bdd15e22d0d99191373e166ba9180797ead28107cf29cc5d9
+  sha256: 13a15bad644f5477e32c64c1adc036be0b279993a4bf2461ac11d5217686a687
 
 build:
   number: 0
@@ -16,15 +16,18 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - pkg-config
+    - bmi-c
 
 test:
   commands:
     - hydrotrend -h
     - hydrotrend -v
-    - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO.IN > ./HYDRO.IN
-    - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO0.HYPS > ./HYDRO0.HYPS
-    - hydrotrend --prefix=HYDRO --in-dir=. --out-dir=.  # [not win]
-    - hydrotrend  # [win]
+    - mkdir HYDRO_IN HYDRO_OUTPUT
+    - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO.IN > ./HYDRO_IN/HYDRO.IN
+    - curl https://raw.githubusercontent.com/csdms-contrib/hydrotrend/master/data/input/HYDRO0.HYPS > ./HYDRO_IN/HYDRO0.HYPS
+    - hydrotrend
+
 about:
   home: http://csdms.colorado.edu/wiki/Model:HydroTrend
   license: MIT
